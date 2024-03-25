@@ -75,3 +75,10 @@
     border-radius:20px;
     box-shadow: 10px 10px 20px black;
   }
+
+  @media  (max-width: 500px) {
+    #menu-items1, #menu-items2, #menu-items3, #menu-items4, #menu-items5{
+        width:50%;
+      }
+    
+  }
