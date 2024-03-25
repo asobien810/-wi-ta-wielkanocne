@@ -1,0 +1,77 @@
+:root {
+    --button-padding: 1em;
+    --space-for-arrow: 2em;
+  }
+  /* Move it away from the edge to make it easier to see */
+  body {
+    margin: 50px;
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(230, 251, 228);
+  }
+
+
+  button{
+    cursor:pointer;
+  }
+  .close-button{
+    background-color: transparent;
+    border:none;
+    margin:10px;
+  }
+  .close-button::before{
+    content: 'X';
+  }
+  ul{
+    font-size:20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .menu-button {
+    position: relative;
+    padding-block: .5em; /* top and bottom padding */
+    padding-inline-start: var(--space-for-arrow); /* left padding */
+    padding-inline-end: var(--button-padding); /*right padding */
+    border: none;
+    border-radius: .25em;
+    background-color: transparent;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: padding 250ms ease, background-color 250ms ease;
+  }
+  
+  .menu-button::before {
+    position: absolute;
+    content: '🡣';
+    background-size: 1em;
+    inset-block-start: 50%;
+    inset-inline-start: .25em;
+    transform: translateY(-50%);
+    padding: .25em;
+    border-radius: 50%;
+    background-color: pink;
+    line-height: 1;
+    transition: inset-inline-start 250ms ease;
+  }
+  
+  .menu-button:hover {
+    padding-inline-start: var(--button-padding);  /* left padding */
+    padding-inline-end: var(--space-for-arrow);  /* right padding */
+    background-color: pink;
+  }
+  
+  .menu-button:hover::before {
+    inset-inline-start: calc(100% - 1.75em);
+  }
+
+  #menu-items1, #menu-items2, #menu-items3, #menu-items4, #menu-items5{
+    background-color: pink;
+    width:400px;
+    padding:10px;
+    margin:20px;
+    border-radius:20px;
+    box-shadow: 10px 10px 20px black;
+  }
